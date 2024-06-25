@@ -1,0 +1,47 @@
+.search {
+  width: 100%;
+  position: relative;
+  margin: 20px 0;
+
+  input {
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 0 20px;
+  }
+
+  .searchResult {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    background-color: #ddd;
+
+    .searchResultItem {
+      padding: 10px 15px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: aqua;
+        border-radius: 0 0 10px 10px;
+      }
+    }
+
+    .resultNotFound{
+      padding: 10px 15px;
+      transition: background-color 0.3s;
+    }
+  }
+}
+.datalar {
+  width: 100%;
+  display: flex;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+
+  .child{
+    margin-right: 15px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+}

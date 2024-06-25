@@ -1,0 +1,53 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        transition: opacity 0.3s ease-in-out;
+
+        .subMenu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+            overflow: hidden;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Yavaşça açılsın */
+            li {
+                width: 100%;
+                transition: opacity 0.3s ease-in-out;
+            }
+        }
+    }
+
+    a {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .open .subMenu {
+        display: flex;
+        position: absolute;
+        left: -235px; /* Sola konumlandır */
+        background: var(--white-color);
+        width: 70%;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Yavaşça açılsın */
+        transform: translateX(-20px); /* Başlangıçta sola kaydırılsın */
+    }
+
+    .open .subMenu {
+        transform: translateX(0); /* Açıldığında normal konuma gelsin */
+    }
+
+    .arrow {
+        margin-left: none;
+    }
+}

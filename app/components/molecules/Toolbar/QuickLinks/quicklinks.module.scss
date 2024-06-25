@@ -1,0 +1,123 @@
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 1.5rem 0;
+
+    .figure {
+        color: var(--secondary-color);
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+
+    &:hover .menu {
+        display: flex;
+    }
+
+
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: var(--white-color);
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 400px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        z-index: 1;
+        top: 70px;
+
+        .header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: var(--primary-color);
+            border-radius: 20px 20px 0 0;
+            padding: 1.5rem 0;
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            li {
+                width: 50%;
+                padding: 1rem 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+
+                &:nth-child(1) {
+                    border: 1px solid #dddddd50;
+                    border-collapse: collapse;
+                }
+
+                &:nth-child(2) {
+                    border: 1px solid #dddddd50;
+                    border-collapse: collapse;
+                }
+
+                &:nth-child(3) {
+                    border: 1px solid #dddddd50;
+                    border-collapse: collapse;
+                }
+
+                &:nth-child(4) {
+                    border: 1px solid #dddddd50;
+                    border-collapse: collapse;
+                }
+
+                &:hover {
+                    background-color: var(--light-color);
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    span {
+                        color: var(--secondary-color);
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 1rem 0;
+
+            &:hover {
+                .view {
+                    color: var(--primary-color);
+                }
+            }
+
+            .view {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                font-weight: 500;
+                color: var(--secondary-color);
+            }
+        }
+    }
+}
